@@ -1,0 +1,19 @@
+# Development dependencies: test suite, linting, and the Jupyter notebook.
+#
+# Install requirements.txt FIRST -- this file intentionally does not chain to it
+# with a `-r requirements.txt` line, because `-r` is a pip directive that conda
+# and mamba reject when reading a spec file.
+#
+#   mamba install -c conda-forge --file requirements.txt
+#   mamba install -c conda-forge --file requirements-dev.txt
+#
+# pytest       - wdf_python/wdf/test/ (also what wdf_python/tox.ini runs)
+# flake8       - the lint env in wdf_python/tox.ini, which configures
+#                max-line-length = 110 and a small ignore list
+# jupyterlab   - DataStandard/wdfProcessing.ipynb
+# ipykernel    - registers the environment as a notebook kernel
+
+pytest>=7.0
+flake8>=5.0
+jupyterlab>=4.0
+ipykernel>=6.0

@@ -1,0 +1,41 @@
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class   
+
+# Ignore virtual environment directories
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/   
+
+# Distribution / packaging
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST   
+
+SoftwareManuals/
+*Feature_Plan.md
+*ARCHITECTURE.md
+*ANALYSIS_WIDGET_README.md
+
+# Local machine-specific ZWO camera SDK config (keep the .example version tracked)
+zwo_config.json
+
+# Local machine-specific objective calibrations (keep the .example version tracked)
+objectives.csv

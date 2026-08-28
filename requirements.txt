@@ -1,0 +1,29 @@
+# Runtime dependencies for DLabDataStandard.
+#
+# Every spec below is available on conda-forge, so this file is deliberately
+# installer-agnostic and works with either:
+#
+#   mamba install -c conda-forge --file requirements.txt   <-- preferred, see README
+#   pip install -r requirements.txt                        <-- fallback
+#
+# INCOMPLETE ON ITS OWN. Two more packages are needed and neither is on
+# conda-forge, so they are installed with pip instead (see "Installation" in
+# README.md):
+#
+#   wdf          - the vendored Renishaw reader in ./wdf_python (not published anywhere)
+#   renishawWiRE - PyPI only
+#
+# Please do not add those two here: a local path spec makes this file
+# depend on the working directory, and any pip-only line makes
+# `mamba install --file` fail outright.
+#
+# Note `pillow` is lowercase (conda-forge package names are lowercase; pip
+# matches names case-insensitively, so lowercase is the only spelling both
+# installers accept).
+
+numpy>=1.20.0
+h5py>=3.6.0
+pandas>=1.4.0
+matplotlib>=3.5.0
+pillow>=8.0.0
+natsort>=8.0.0
